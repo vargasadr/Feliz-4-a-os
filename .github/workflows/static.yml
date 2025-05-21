@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz 4 Años</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff0f5;
+            overflow-x: hidden; /* Permite scroll vertical, oculta horizontal */
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #c40040;
+            font-size: 4em;
+            margin-top: 40px;
+        }
+
+        .imagen-ramo {
+            width: 300px;
+            max-width: 80%;
+            border: 8px solid #c40040;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            margin-top: 20px;
+        }
+
+        p, h2, h3 {
+            color: #660022;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.3em;
+        }
+
+        .petalo {
+            position: fixed;
+            top: -50px;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/34/Red_rose_petals.png');
+            background-size: cover;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: caer linear infinite;
+        }
+
+        @keyframes caer {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .boton-responder {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #c40040;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton-responder:hover {
+            background-color: #a00033;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌹 Feliz 4 Años 🌹</h1>
+
+    <img src="https://florchiquitita.com/cdn/shop/files/ramo_buchon_de_rosas.png?v=1725412592&width=600" 
+         alt="Ramo de rosas rojas con moño decorativo" 
+         class="imagen-ramo">
+
+    <p>Un ramo de amor para celebrar estos hermosos 4 años juntos. ❤️</p>
+
+    <hr>
+
+    <h3>No te puedo regalar un ramo de rosas real, pero me esforcé haciendo esto.  
+    Sos la mejor novia del mundo y gracias por todo.</h3>
+
+    <h2>¡TEEEE AMOOOOO! ❤️</h2>
+
+    <!-- BOTÓN PARA RESPONDER -->
+    <a href="https://wa.me/5493773433554?text=¡Me%20encantó%20tu%20regalo%20de%204%20años!%20❤️" target="_blank">
+        <button class="boton-responder">RESPONDER POR WHATSAPP 💌</button>
+    </a>
+
+    <!-- MÚSICA ROMÁNTICA OPCIONAL -->
+    <!--
+    <audio autoplay loop>
+        <source src="tu-cancion-romantica.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    -->
+
+    <script>
+        // Crear pétalos en caída
+        function crearPetalo() {
+            const petalo = document.createElement('div');
+            petalo.classList.add('petalo');
+            petalo.style.left = Math.random() * window.innerWidth + 'px';
+            petalo.style.animationDuration = 5 + Math.random() * 5 + 's';
+            document.body.appendChild(petalo);
+            setTimeout(() => petalo.remove(), 10000);
+        }
+
+        // Crear varios pétalos continuamente
+        setInterval(crearPetalo, 500);
+    </script>
+</body>
+</html>
